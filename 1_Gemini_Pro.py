@@ -9,7 +9,7 @@ import os
 
 # 确保您已经设置了API密钥环境变量，例如：os.environ["API_KEY"]
 # 或者直接在这里配置密钥：genai.configure(api_key="您的API_密钥")
-genai.configure(api_key=os.environ["API_KEY"])
+genai.configure(api_key=os.environ["AIzaSyCauBSejjVkMBh3sRFEfOymVwBnSkTJrCo"])
 
 for m in genai.list_models():
     # 仅列出支持生成内容的模型
