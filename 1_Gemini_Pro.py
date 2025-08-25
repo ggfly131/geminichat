@@ -4,6 +4,17 @@ import google.generativeai as genai
 import streamlit as st
 import time
 import random
+import google.generativeai as genai
+import os
+
+# 确保您已经设置了API密钥环境变量，例如：os.environ["API_KEY"]
+# 或者直接在这里配置密钥：genai.configure(api_key="您的API_密钥")
+genai.configure(api_key=os.environ["API_KEY"])
+
+for m in genai.list_models():
+    # 仅列出支持生成内容的模型
+    if 'generateContent' in m.supported_generation_methods:
+        print(m.name)
 from utils import SAFETY_SETTTINGS
 
 
